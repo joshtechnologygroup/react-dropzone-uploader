@@ -22,6 +22,11 @@ function createConfig(entry, output) {
           use: 'babel-loader',
         },
         {
+          test: /\.(ts|tsx)$/,
+          exclude: /node_modules/,
+          loader: 'ts-loader',
+        },
+        {
           test: /\.css$/,
           loaders: ['style-loader', 'css-loader'],
         },
